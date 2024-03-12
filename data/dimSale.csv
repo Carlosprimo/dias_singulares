@@ -1,0 +1,16 @@
+id,saleCategory,productSource,productAssociate,distance
+1,associative,Television SAMSUNG,Barra De Sonido Samsung,0.1
+2,additive,Television SAMSUNG,Consola PS5 Play Station,0.6
+3,associative,Auriculares Inalámbricos,Smartphone XYZ,0.2
+4,additive,Laptop SuperFast,Impresora Multifuncional,0.4
+5,associative,Altavoces Bluetooth,Cámara DSLR Profesional,0.3
+6,additive,Tablet UltraSlim,Refrigerador LG,0.5
+7,associative,Lavadora Whirlpool,Horno Microondas,0.2
+8,additive,Silla de Oficina Ergonómica,Mesa de Centro Moderna,0.7
+9,associative,Smartphone XYZ,Laptop SuperFast,0.4
+10,additive,Consola PS5 Play Station,Refrigerador LG,0.6
+11,associative,Barra De Sonido Samsung,Altavoces Bluetooth,0.3
+12,additive,Mesa de Centro Moderna,Silla de Oficina Ergonómica,0.7
+13,associative,Cámara DSLR Profesional,Television SAMSUNG,0.3
+14,additive,Horno Microondas,Lavadora Whirlpool,0.2
+15,associative,Refrigerador LG,Tablet UltraSlim,0.5
