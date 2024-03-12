@@ -209,6 +209,9 @@ if __name__ == '__main__':
             layout = go.Layout(
                     title='Relación entre productos',
                     showlegend=False,
+                    xaxis=dict(axis),
+                    yaxis=dict(axis),
+                    zaxis=dict(axis),
                 margin=dict(
                     t=25,
                     b=0,
@@ -220,16 +223,9 @@ if __name__ == '__main__':
             data=[trace1, trace2]
             fig=go.Figure(data=data)
             fig.update_layout(
-                height=600, 
-                scene = dict(xaxis = dict(showgrid = False,showticklabels = False),
-                                   yaxis = dict(showgrid = False,showticklabels = False),
-                                   zaxis = dict(showgrid = False,showticklabels = False)
-             )
+                height=600
             )
-            # fig.update_layout(scene = dict(xaxis = dict(showgrid = False,showticklabels = False),
-            #                        yaxis = dict(showgrid = False,showticklabels = False),
-            #                        zaxis = dict(showgrid = False,showticklabels = False)
-            #  ))
+
             with tab2:
                 st.plotly_chart(fig, use_container_width=True, theme=None, config=dict(displaylogo=False, displayModeBar=False))
         except:
