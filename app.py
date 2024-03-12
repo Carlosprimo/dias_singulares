@@ -221,7 +221,7 @@ if __name__ == '__main__':
                 hovermode='closest')
             
             data=[trace1, trace2]
-            fig=go.Figure(data=data)
+            fig=go.Figure(data=data, layout=layout)
             fig.update_layout(
                 height=600
             )
