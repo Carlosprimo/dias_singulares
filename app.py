@@ -145,7 +145,7 @@ if __name__ == '__main__':
                          yaxis=dict(visible=False),)
         # fig.update_xaxes(visible=False)
         # fig.update_yaxes(visible=False)
-        tab1, tab2, tab3, tab4 = st.tabs(['Ventas individuales', 'Ventas asociativas', 'Ventas totales', 'Proyección de ventas'])
+        tab1, tab2, tab3, tab4 = st.tabs(['Ventas asociativas', 'Relación asociativas', 'Ventas totales', 'Proyección de ventas'])
 
         tab1.plotly_chart(fig, theme=None, use_container_width=True, config=dict(displaylogo=False, displayModeBar=True))
 
@@ -203,17 +203,12 @@ if __name__ == '__main__':
                     showline=False,
                     zeroline=False,
                     showgrid=False,
-                    showticklabels=False
-                    )
+                    showticklabels=False,
+                    visible=False)
 
             layout = go.Layout(
                     title='Relación entre productos',
                     showlegend=False,
-                    scene=dict(
-                        xaxis=dict(axis),
-                        yaxis=dict(axis),
-                        zaxis=dict(axis),
-                    ),
                 margin=dict(
                     t=25,
                     b=0,
@@ -223,11 +218,20 @@ if __name__ == '__main__':
                 hovermode='closest')
             
             data=[trace1, trace2]
-            fig=go.Figure(data=data, layout=layout)
+            fig=go.Figure(data=data)
             fig.update_layout(
                 height=600, 
+                scene = dict(xaxis = dict(showgrid = False,showticklabels = False),
+                                   yaxis = dict(showgrid = False,showticklabels = False),
+                                   zaxis = dict(showgrid = False,showticklabels = False)
+             )
             )
-            tab2.plotly_chart(fig, use_container_width=True, config=dict(displaylogo=False, displayModeBar=True))
+            # fig.update_layout(scene = dict(xaxis = dict(showgrid = False,showticklabels = False),
+            #                        yaxis = dict(showgrid = False,showticklabels = False),
+            #                        zaxis = dict(showgrid = False,showticklabels = False)
+            #  ))
+            with tab2:
+                st.plotly_chart(fig, use_container_width=True, theme=None, config=dict(displaylogo=False, displayModeBar=False))
         except:
             pass
 
