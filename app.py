@@ -145,7 +145,7 @@ if __name__ == '__main__':
                          yaxis=dict(visible=False),)
         # fig.update_xaxes(visible=False)
         # fig.update_yaxes(visible=False)
-        tab1, tab2, tab3, tab4 = st.tabs(['Ventas asociativas', 'Relación asociativas', 'Ventas totales', 'Proyección de ventas'])
+        tab1, tab2, tab3, tab4 = st.tabs(['Venta asociativa', 'Relación asociativa', 'Ventas totales', 'Proyección de ventas'])
 
         tab1.plotly_chart(fig, theme=None, use_container_width=True, config=dict(displaylogo=False, displayModeBar=True))
 
