@@ -209,9 +209,9 @@ if __name__ == '__main__':
             layout = go.Layout(
                     title='Relación entre productos',
                     showlegend=False,
-                    xaxis=dict(axis),
+                    scene=dict(xaxis=dict(axis),
                     yaxis=dict(axis),
-                    zaxis=dict(axis),
+                    zaxis=dict(axis)),
                 margin=dict(
                     t=25,
                     b=0,
